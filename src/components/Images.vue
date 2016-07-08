@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-on:click="setActive">
     <img src="http://lorempixel.com/400/200/">
   </div>
 </template>

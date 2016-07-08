@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{status}}
     <button v-on:click="status = 'liked'">Like</button>
     <button v-on:click="status = 'disliked'">Dislike</button>
   </div>
@@ -20,5 +19,7 @@ export default {
 </script>
 
 <style scoped>
-
+  button{
+    display: block;
+  }
 </style>

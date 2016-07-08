@@ -26,9 +26,11 @@ export default {
   }
   .size{
     border: 1px solid gray;
-    border-radius: 5px;
     text-transform: uppercase;
     padding: 5px;
+    margin-right: 5px;
     flex-grow: 1;
+    height: 30px;
+    background: transparent;
   }
 </style>

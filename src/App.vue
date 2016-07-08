@@ -26,13 +26,12 @@ export default {
     };
   },
   computed: {
-    suggestedItems: function () { // eslint-disable-line
-
+    suggestedItems() {
       const items = productMock.filter((item) => {
         let matches = 0;
         this.inventoryItems.forEach((inventoryItem) => {
           const isRelated = inventoryItem.relatedProducts.indexOf(item.id) !== -1;
-          const isNotDisliked = inventoryItem.likeStatus !== 'disliked';
+          const isNotDisliked = inventoryItem.likeStatus === 'liked';
           if (isRelated && isNotDisliked) {
             matches++;
           }
@@ -45,7 +44,7 @@ export default {
     },
   },
   events: {
-    setActiveProduct: function (product) { // eslint-disable-line
+    setActiveProduct(product) {
       this.activeProduct = product;
     },
   },

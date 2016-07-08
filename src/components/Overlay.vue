@@ -41,5 +41,6 @@ export default {
   }
   .content{
     background: white;
+    padding: 20px;
   }
 </style>

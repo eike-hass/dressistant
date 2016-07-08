@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="color in colors" class="color" v-bind:style="{ background: color }"></div>
+    <div v-for="color in colors" class="color" v-bind:style="{ background: color }" v-on:click="setActive"></div>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 export default {
   props: [
     'colors',
+    'setActive',
   ],
   data() {
     return {
@@ -22,7 +23,7 @@ export default {
     width: 30px;
     height: 30px;
     border: 1px solid gray;
-    border-radius: 50%;
     display: inline-block;
+    margin-right: 5px;
   }
 </style>
