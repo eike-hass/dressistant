@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       inventoryItems: [productMock[0]],
-      activeProduct: [productMock[0]],
+      activeProduct: null,
     };
   },
   computed: {

@@ -7,8 +7,11 @@
 </template>
 
 <script>
-
+import Product from './Product';
 export default {
+  components: {
+    Product,
+  },
   props: [
     'product',
   ],
@@ -24,6 +27,14 @@ export default {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.8);
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content{
+    background: white;
   }
 </style>

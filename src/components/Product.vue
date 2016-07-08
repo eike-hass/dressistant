@@ -12,12 +12,12 @@
         <price :price="product.price"></price>
       </div>
     </div>
-    <div v-if="layout == 'teaser'">
+    <div v-if="layout == 'teaser'" class="teaser">
       <images :images="product.images"></images>
       <h2>{{product.title}}</h2>
       <price :price="product.price"></price>
     </div>
-    <div v-if="layout == 'detail'">
+    <div v-if="layout == 'detail'" class="detail">
       <images :images="product.images"></images>
       <h2>{{product.title}}</h2>
       <p>{{product.description}}</p>
