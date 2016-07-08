@@ -1,8 +1,8 @@
 <template>
   <div class="sizes">
-    <div v-for="size in sizes" class="size">
+    <button v-for="size in sizes" class="size" v-on:click="setActive">
       {{size}}
-    </div>
+    </button>
   </div>
 </template>
 
@@ -11,6 +11,7 @@
 export default {
   props: [
     'sizes',
+    'setActive',
   ],
   data() {
     return {

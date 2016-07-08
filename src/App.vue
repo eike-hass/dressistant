@@ -44,6 +44,11 @@ export default {
       return items;
     },
   },
+  events: {
+    setActiveProduct: function (product) { // eslint-disable-line
+      this.activeProduct = product;
+    },
+  },
 };
 </script>
 <style>

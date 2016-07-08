@@ -3,7 +3,7 @@ export default [{
   title: 'Test Title 1',
   description: 'Test Description',
   images: [
-    'http://lorempixel.com/400/200/people/1',
+    'http://lorempixel.com/400/200/people/4',
     'http://lorempixel.com/400/200/people/2',
     'http://lorempixel.com/400/200/people/3',
   ],

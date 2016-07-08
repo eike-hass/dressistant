@@ -8,7 +8,7 @@
       <div class="right">
         <h2>{{product.title}}</h2>
         <color-picker :colors="product.colors"></color-picker>
-        <size-picker :sizes="product.sizes"></size-pick>
+        <size-picker :sizes="product.sizes" :set-active="setActive"></size-pick>
         <price :price="product.price"></price>
       </div>
     </div>
@@ -48,9 +48,13 @@ export default {
     'layout',
   ],
   data() {
-    return {
-
-    };
+    return {};
+  },
+  methods: {
+    setActive() {
+      console.log('click');
+      this.$dispatch('setActiveProduct', this.product);
+    },
   },
 };
 </script>

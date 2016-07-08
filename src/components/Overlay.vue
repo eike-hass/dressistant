@@ -1,5 +1,5 @@
 <template>
-  <div class="backdrop">
+  <div class="backdrop" v-on:click="close">
     <div class="content">
       <product :product="product" layout="detail"></product>
     </div>
@@ -18,6 +18,11 @@ export default {
   data() {
     return {
     };
+  },
+  methods: {
+    close() {
+      this.$dispatch('setActiveProduct', null);
+    },
   },
 };
 </script>
