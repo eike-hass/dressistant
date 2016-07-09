@@ -21,6 +21,7 @@ export default [{
     '44',
     '45',
   ],
+  selectedSize: '43',
   colors: [
     '#1f1f27',
     '#57656f',
@@ -55,13 +56,14 @@ export default [{
     'l',
     'xl',
   ],
+  selectedSize: 'm',
   colors: [
     '#fd9498',
     '#c4e8f8',
     '#862b71',
     '#464557',
   ],
-  selectedColor: '#fd9498',
+  selectedColor: '#c4e8f8',
   price: {
     regular: 6.99,
     discounted: null,
@@ -86,10 +88,12 @@ export default [{
     'l',
     'xl',
   ],
+  selectedSize: 'm',
   colors: [
     '#0f1417',
     '#0c0c0a',
   ],
+  selectedColor: '#0f1417',
   price: {
     regular: 14.99,
     discounted: 9.99,
@@ -111,6 +115,7 @@ export default [{
   sizes: [
     'm',
   ],
+  selectedSize: 'm',
   colors: [
     '#161e29',
   ],

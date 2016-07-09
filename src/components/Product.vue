@@ -12,13 +12,13 @@
       </div>
     </div>
     <div v-if="layout == 'teaser'" class="teaser" v-on:click="setActive">
-      <images :images="product.images"></images>
+      <images :images="product.images[product.colors.indexOf(product.selectedColor)]"></images>
       <h2>{{product.title}}</h2>
       <price :price="product.price"></price>
     </div>
     <div v-if="layout == 'detail'" class="detail">
       <div class="left">
-        <images :images="product.images"></images>
+        <images :images="product.images[product.colors.indexOf(product.selectedColor)]"></images>
         <button v-on:click="addToList">Brings mir</button>
       </div>
       <div class="right">

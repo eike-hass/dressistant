@@ -49,6 +49,7 @@ export default {
     padding: 5px;
     margin-right: 5px;
     flex-grow: 1;
+    width: 30px;
     height: 30px;
     background: transparent;
     border-radius: 50%;

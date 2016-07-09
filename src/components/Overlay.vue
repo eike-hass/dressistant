@@ -43,6 +43,6 @@ export default {
   .content{
     background: white;
     padding: 20px;
-    height: 100%;
+    height: auto;
   }
 </style>
