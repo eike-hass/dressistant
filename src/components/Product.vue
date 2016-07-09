@@ -25,7 +25,7 @@
         <h2>{{product.title}}</h2>
         <p>{{product.description}}</p>
         <color-picker :colors="product.colors" :selected.sync="product.selectedColor"></color-picker>
-        <size-picker :sizes="product.sizes" :selected.sync="product.selectedSize"></size-pick>
+        <size-picker :sizes="product.sizes" :selected.sync="product.selectedSize"></size-picker>
         <price :price="product.price"></price>
       </div>
     </div>
@@ -77,6 +77,9 @@ export default {
   .compact .right{
     width: 50%;
     text-align: center;
+  }
+  .compact h2{
+    margin-top: 0.25em;
   }
   .teaser{
     text-align: center;

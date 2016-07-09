@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="inventory">
     <h1>Inventory</h1>
     <div class="product" v-for="product in items">
       <product :product.sync="product" layout="compact"></product>
@@ -24,6 +24,9 @@
 </script>
 
 <style scoped>
+  .inventory{
+
+  }
   h1{
     text-align: center;
   }

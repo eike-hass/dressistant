@@ -30,7 +30,7 @@
   .suggestions{
     padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   .product{
     width: 33%;

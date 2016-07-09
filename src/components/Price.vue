@@ -1,5 +1,5 @@
 <template>
-  <dh2>
+  <h2>
     {{price.regular}}
   </h2>
 </template>
