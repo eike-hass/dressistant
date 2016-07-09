@@ -1,6 +1,12 @@
 <template>
   <div>
-    <div v-for="color in colors" class="color" v-bind:style="{ background: color }" v-bind:class="{ 'selected':selected === color }" v-on:click="setActive"></div>
+    <div
+      v-for="color in colors"
+      class="color"
+      v-bind:style="{ background: color }"
+      v-bind:class="{ 'selected':selected === color }"
+      v-on:click="select(color)"
+    ></div>
   </div>
 </template>
 
@@ -16,6 +22,12 @@ export default {
     return {
     };
   },
+  methods: {
+    select(color) {
+      this.selected = color;
+      this.setActive();
+    },
+  },
 };
 </script>
 
@@ -26,5 +38,8 @@ export default {
     border: 1px solid gray;
     display: inline-block;
     margin-right: 5px;
+  }
+  .selected{
+    border-color: black;
   }
 </style>

@@ -1,6 +1,11 @@
 <template>
   <div class="sizes">
-    <button v-for="size in sizes" class="size" v-on:click="setActive">
+    <button
+      v-for="size in sizes"
+      class="size"
+      v-on:click="select(size)"
+      v-bind:class="{ 'selected':selected === size }"
+    >
       {{size}}
     </button>
   </div>
@@ -12,11 +17,19 @@ export default {
   props: [
     'sizes',
     'setActive',
+    'selected',
   ],
   data() {
     return {
     };
   },
+  methods: {
+    select(size) {
+      this.selected = size;
+      this.setActive();
+    },
+  },
+
 };
 </script>
 
@@ -32,5 +45,8 @@ export default {
     flex-grow: 1;
     height: 30px;
     background: transparent;
+  }
+  .selected{
+    border-color: black;
   }
 </style>

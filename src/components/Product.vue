@@ -1,17 +1,14 @@
 <template>
    <div>
     <div v-if="layout == 'compact'" class="compact">
-      <div class="like">
-        <like-dislike :status.sync="product.likeStatus"></like-dislike>
-      </div>
       <div class="left">
         <images :images="product.images" :set-active="setActive"></images>
       </div>
       <div class="right">
         <h2>{{product.title}}</h2>
-        <color-picker :colors="product.colors" :selected="product.selectedColor" :set-active="setActive"></color-picker>
-        <size-picker :sizes="product.sizes" :selected="product.selectedSize" :set-active="setActive"></size-pick>
-        <price :price="product.price"></price>
+        <color-picker :colors="product.colors" :selected.sync="product.selectedColor" :set-active="setActive"></color-picker>
+        <size-picker :sizes="product.sizes" :selected.sync="product.selectedSize" :set-active="setActive"></size-picker>
+        <like-dislike :status.sync="product.likeStatus"></like-dislike>
       </div>
     </div>
     <div v-if="layout == 'teaser'" class="teaser" v-on:click="setActive">
@@ -27,9 +24,9 @@
       <div class="right">
         <h2>{{product.title}}</h2>
         <p>{{product.description}}</p>
-        <color-picker :colors="product.colors" :selected="product.selectedColor"></color-picker>
+        <color-picker :colors="product.colors" :selected.sync="product.selectedColor"></color-picker>
         <price :price="product.price"></price>
-        <size-picker :sizes="product.sizes" :selected="product.selectedSize"></size-pick>
+        <size-picker :sizes="product.sizes" :selected.sync="product.selectedSize"></size-pick>
       </div>
     </div>
   </div>
@@ -70,9 +67,6 @@ export default {
     display: flex;
     text-align: left;
   }
-  .compact .like{
-    margin-right: 20px;
-  }
   .compact .left{
     margin-right: 20px;
     width: 200px;
@@ -83,5 +77,13 @@ export default {
   .detail .left{
     margin-right: 20px;
     max-width: 60%;
+  }
+  .detail button{
+    background: black;
+    border: 2px solid black;
+    width: 100%;
+    color: white;
+    height: 40px;
+    text-transform: uppercase;
   }
 </style>

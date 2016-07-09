@@ -1,5 +1,6 @@
 <template>
   <div class="butler">
+    <svg class="icon"><use xlink:href="#lnr-store"></use></svg>
       <div class="count">2</div>
   </div>
 </template>
@@ -19,13 +20,9 @@ export default {
 
 <style scoped>
   .butler{
-    position: fixed;
-    right: 20px;
-    top: 20px;
+    position: relative;
     width: 50px;
     height: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
   }
   .butler .count{
     position: absolute;
@@ -38,5 +35,13 @@ export default {
     width: 20px;
     height: 20px;
     text-align: center;
+  }
+  .icon{
+    color: black;
+    font-size: 50px;
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
   }
 </style>

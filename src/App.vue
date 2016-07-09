@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <butler></butler>
+    <header>
+      <img id="logo" src="/static/Logo_dressistant.png">
+      <butler></butler>
+    </header>
     <overlay v-if="activeProduct" :product="activeProduct"></overlay>
-    <inventory :items.sync="inventoryItems"></inventory>
-    <suggestions :items="suggestedItems"></suggestions>
+    <main>
+      <inventory :items.sync="inventoryItems"></inventory>
+    </main>
+    <footer>
+      <suggestions :items="suggestedItems"></suggestions>
+    </footer>
   </div>
 </template>
 
@@ -59,20 +66,41 @@ html {
 }
 
 body {
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
-  height: 100%;
+  height: calc(100% - 90px);
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 90px 0 0 0;
+  font-family: 'Montserrat', sans-serif;
+}
+header{
+  position: fixed;
+  height: 90px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+header #logo{
+  width: 200px;
+}
 img{
   max-width: 100%;
 }
 
 #app {
   color: #2c3e50;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#app main {
+  flex-grow: 1;
 }
 </style>
