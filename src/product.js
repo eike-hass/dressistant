@@ -32,6 +32,7 @@ export default [{
     discounted: 7.00,
   },
   relatedProducts: [],
+  relatedProductsLiked: ['9'],
   likeStatus: null,
 },
 {
