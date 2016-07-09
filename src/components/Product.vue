@@ -2,7 +2,7 @@
    <div>
     <div v-if="layout == 'compact'" class="compact">
       <div class="left">
-        <images :images="product.images" :set-active="setActive"></images>
+        <images :images="product.images[product.colors.indexOf(product.selectedColor)]" :set-active="setActive"></images>
       </div>
       <div class="right">
         <h2>{{product.title}}</h2>

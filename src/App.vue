@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      inventoryItems: [productMock[0], productMock[1]],
+      inventoryItems: [productMock[0], productMock[1], productMock[2]],
       activeProduct: null,
       selectedProducts: [],
     };
