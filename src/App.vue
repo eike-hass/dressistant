@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <img id="logo" src="/static/Logo_dressistant.png">
-      <butler></butler>
+      <butler :items="selectedProducts"></butler>
     </header>
     <overlay v-if="activeProduct" :product="activeProduct"></overlay>
     <main>
@@ -10,6 +10,7 @@
     </main>
     <footer>
       <suggestions :items="suggestedItems"></suggestions>
+      <img src="/static/Banner.jpg">
     </footer>
   </div>
 </template>
@@ -33,6 +34,7 @@ export default {
     return {
       inventoryItems: [productMock[0], productMock[1]],
       activeProduct: null,
+      selectedProducts: [],
     };
   },
   computed: {
@@ -57,6 +59,9 @@ export default {
     setActiveProduct(product) {
       this.activeProduct = product;
     },
+    addToList(product) {
+      this.selectedProducts.push(product);
+    },
   },
 };
 </script>
@@ -67,8 +72,6 @@ html {
 
 body {
   height: calc(100% - 90px);
-  padding-left: 100px;
-  padding-right: 100px;
   margin: 90px 0 0 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -85,16 +88,24 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 5;
+  background: #333333;
+  color: white;
 }
 header #logo{
   width: 200px;
+}
+main{
+  padding-left: 100px;
+  padding-right: 100px;
+  overflow: auto;
 }
 img{
   max-width: 100%;
 }
 
 #app {
-  color: #2c3e50;
+  color: #333333;
   display: flex;
   flex-direction: column;
   height: 100%;

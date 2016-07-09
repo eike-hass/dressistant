@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>In den folgenden Farben verfügbar:</h3>
     <div
       v-for="color in colors"
       class="color"
@@ -38,6 +39,10 @@ export default {
     border: 1px solid gray;
     display: inline-block;
     margin-right: 5px;
+    border-radius: 50%;
+  }
+  h3{
+    font-size: 16px;
   }
   .selected{
     border-color: black;

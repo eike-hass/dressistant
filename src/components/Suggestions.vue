@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Suggestions</h1>
+  <div class="suggestions">
+    <h1>Vorschläge</h1>
     <div class="product" v-for="product in items">
       <product :product="product" layout="teaser"></product>
     </div>
@@ -24,6 +24,14 @@
 </script>
 
 <style scoped>
+  h1{
+    text-align: center;
+  }
+  .suggestions{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+  }
   .product{
     width: 33%;
     display: inline-block;

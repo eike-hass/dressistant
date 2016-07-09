@@ -66,7 +66,7 @@ export default [{
 {
   id: '3',
   title: 'MONKSTRAP AUS LEDER',
-  description: 'SCHNITT: 100% Kuhleder\r\nFUTTER: 70% Baumwolle, 30% Polyester\r\nSOHLE: 100% Thermoplastischer Kautschuk\r\nINNENSOHLE: 100% Mestizo', // eslint-disable-line
+  description: 'SCHNITT: 100% Kuhleder<br/>FUTTER: 70% Baumwolle, 30% Polyester\r\nSOHLE: 100% Thermoplastischer Kautschuk\r\nINNENSOHLE: 100% Mestizo', // eslint-disable-line
   images: [
     '/static/shoes_1.jpg',
     '/static/shoes_2.jpg',

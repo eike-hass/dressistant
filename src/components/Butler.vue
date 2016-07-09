@@ -1,7 +1,10 @@
 <template>
   <div class="butler">
+    <button v-if="items.length">
+      Besorgs mir
+    </button>
     <svg class="icon"><use xlink:href="#lnr-store"></use></svg>
-      <div class="count">2</div>
+      <div class="count">{{items.length}}</div>
   </div>
 </template>
 
@@ -9,10 +12,11 @@
 
 export default {
   props: [
-    'price',
+    'items',
   ],
   data() {
     return {
+
     };
   },
 };
@@ -21,15 +25,15 @@ export default {
 <style scoped>
   .butler{
     position: relative;
-    width: 50px;
-    height: 50px;
+    display: flex;
+    align-items: center;
   }
   .butler .count{
     position: absolute;
     top: -5px;
     right: -5px;
-    background: white;
-    border: 1px solid black;
+    background: #333333;
+    border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
     width: 20px;
@@ -37,11 +41,20 @@ export default {
     text-align: center;
   }
   .icon{
-    color: black;
+    color: white;
     font-size: 50px;
     display: inline-block;
     fill: currentColor;
     width: 1em;
     height: 1em;
+  }
+  button {
+    background: transparent;
+    text-transform: uppercase;
+    border: 2px solid white;
+    height: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
   }
 </style>

@@ -19,7 +19,7 @@
     <div v-if="layout == 'detail'" class="detail">
       <div class="left">
         <images :images="product.images"></images>
-        <button>Brings mir</button>
+        <button v-on:click="addToList">Brings mir</button>
       </div>
       <div class="right">
         <h2>{{product.title}}</h2>
@@ -58,6 +58,9 @@ export default {
     setActive() {
       this.$dispatch('setActiveProduct', this.product);
     },
+    addToList() {
+      this.$dispatch('addToList', this.product);
+    },
   },
 };
 </script>
@@ -69,7 +72,11 @@ export default {
   }
   .compact .left{
     margin-right: 20px;
-    width: 200px;
+    width: 50%;
+  }
+  .compact .right{
+    width: 50%;
+    text-align: center;
   }
   .detail{
     display: flex;

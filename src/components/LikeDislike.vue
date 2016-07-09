@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>Gefällt dir dieses Produkt?</h3>
     <button v-on:click="status = 'liked'"><svg class="icon"><use xlink:href="#lnr-heart"></use></svg></button>
     <button v-on:click="status = 'disliked'" class="dislike"><svg class="icon"><use xlink:href="#lnr-heart"></use></svg></button>
   </div>
@@ -19,6 +20,9 @@ export default {
 </script>
 
 <style scoped>
+  h3{
+    font-size: 16px;
+  }
   button{
     display: inline-block;
     backgound: transparent;
@@ -26,6 +30,9 @@ export default {
     border: none;
     width: 50px;
     height: 50px;
+    position: relative;
+  }
+  button svg{
     position: relative;
     z-index: -1;
   }

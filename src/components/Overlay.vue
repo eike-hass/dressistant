@@ -31,16 +31,18 @@ export default {
   .backdrop{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 90px);
     left: 0;
-    top: 0;
+    top: 90px;
     background: rgba(0,0,0,.95);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index:4;
   }
   .content{
     background: white;
     padding: 20px;
+    height: 100%;
   }
 </style>

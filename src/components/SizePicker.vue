@@ -1,13 +1,16 @@
 <template>
   <div class="sizes">
-    <button
-      v-for="size in sizes"
-      class="size"
-      v-on:click="select(size)"
-      v-bind:class="{ 'selected':selected === size }"
-    >
-      {{size}}
-    </button>
+    <h3>In den folgenden Größen verfügbar:</h3>
+    <div>
+      <button
+        v-for="size in sizes"
+        class="size"
+        v-on:click="select(size)"
+        v-bind:class="{ 'selected':selected === size }"
+      >
+        {{size}}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -35,7 +38,10 @@ export default {
 
 <style scoped>
   .sizes{
-    display: flex;
+
+  }
+  h3{
+    font-size: 16px;
   }
   .size{
     border: 1px solid gray;
@@ -45,8 +51,10 @@ export default {
     flex-grow: 1;
     height: 30px;
     background: transparent;
+    border-radius: 50%;
   }
   .selected{
-    border-color: black;
+    background: black;
+    color: white;
   }
 </style>
