@@ -31,7 +31,7 @@ export default [{
     regular: 14.99,
     discounted: 7.00,
   },
-  relatedProducts: [],
+  relatedProducts: ['10', '11'],
   relatedProductsLiked: ['9'],
   likeStatus: null,
 },
@@ -91,10 +91,10 @@ export default [{
   ],
   selectedSize: 'm',
   colors: [
-    '#ccd2df',
-    '#0c0c0a',
+    '#8b9dab',
+    '#343d46',
   ],
-  selectedColor: '#ccd2df',
+  selectedColor: '#8b9dab',
   price: {
     regular: 14.99,
     discounted: 9.99,
@@ -108,8 +108,8 @@ export default [{
   description: '100% Baumwolle',
   images: [
     [
-      '/static/hat_a_1.jpg',
-      '/static/hat_a_2.jpg',
+      '/static/cap_a_1.jpg',
+      '/static/cap_a_2.jpg',
     ],
   ],
   sizes: [
@@ -122,6 +122,63 @@ export default [{
   selectedColor: '#161e29',
   price: {
     regular: 9.99,
+    discounted: null,
+  },
+  relatedProducts: [],
+  likeStatus: null,
+},
+{
+  id: '10',
+  title: 'SONNENBRILLE',
+  description: '80% Kunststoff, 20% Metall',
+  images: [
+    [
+      '/static/glasses_a_1.jpg',
+    ],
+  ],
+  sizes: [
+    'm',
+  ],
+  selectedSize: 'm',
+  colors: [
+    '#8a9294',
+  ],
+  selectedColor: '#8a9294',
+  price: {
+    regular: 7.99,
+    discounted: null,
+  },
+  relatedProducts: [],
+  likeStatus: null,
+},
+{
+  id: '11',
+  title: 'BOXERSHORTS 3ER-PACK',
+  description: '95% Baumwolle, 5% Elasthan',
+  images: [
+    [
+      '/static/briefs_a_1.jpg',
+      '/static/briefs_a_2.jpg',
+    ],
+    [
+      '/static/briefs_b_1.jpg',
+      '/static/briefs_b_2.jpg',
+    ],
+  ],
+  sizes: [
+    's',
+    'm',
+    'l',
+    'xl',
+  ],
+  selectedSize: 'm',
+  colors: [
+    '#18131a',
+    '#2d3250',
+  ],
+  selectedColor: '#2d3250',
+  price: {
+    regular: 14.99,
     discounted: null,
   },
   relatedProducts: [],
