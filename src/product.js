@@ -3,9 +3,17 @@ export default [{
   title: 'T-SHIRT MIT V-AUSSCHNITT',
   description: '100% Baumwolle',
   images: [
-    '/static/shirt_a_1.jpg',
-    '/static/shirt_a_2.jpg',
-    '/static/shirt_a_3.jpg',
+    [
+      '/static/shirt_b_1.jpg',
+      '/static/shirt_b_2.jpg',
+      '/static/shirt_b_3.jpg',
+    ],
+    [
+      '/static/shirt_a_1.jpg',
+      '/static/shirt_a_2.jpg',
+      '/static/shirt_a_3.jpg',
+    ],
+    [],
   ],
   sizes: [
     's',
@@ -33,9 +41,15 @@ export default [{
   title: '7/8 KHAKI IM SLIM-LOOK',
   description: '51% Baumwolle, 41% Polyamid, 8% Elastan',
   images: [
-    '/static/pants_a_1.jpg',
-    '/static/pants_a_2.jpg',
-    '/static/pants_a_3.jpg',
+    [
+      '/static/pants_a_1.jpg',
+      '/static/pants_a_2.jpg',
+      '/static/pants_a_3.jpg',
+    ],
+    [
+      '/static/pants_b_1.jpg',
+    ],
+    [],
   ],
   sizes: [
     '36',
@@ -66,12 +80,14 @@ export default [{
 {
   id: '3',
   title: 'MONKSTRAP AUS LEDER',
-  description: 'SCHNITT: 100% Kuhleder<br/>FUTTER: 70% Baumwolle, 30% Polyester\r\nSOHLE: 100% Thermoplastischer Kautschuk\r\nINNENSOHLE: 100% Mestizo', // eslint-disable-line
+  description: '100% Kuhleder', // eslint-disable-line
   images: [
-    '/static/shoes_1.jpg',
-    '/static/shoes_2.jpg',
-    '/static/shoes_3.jpg',
-  ],
+    [
+      '/static/shoes_1.jpg',
+      '/static/shoes_2.jpg',
+      '/static/shoes_3.jpg',
+    ],
+],
   sizes: [
     '41',
     '42',
@@ -94,9 +110,12 @@ export default [{
   title: 'STROHHUT',
   description: '100% Zellulosepaste',
   images: [
-    '/static/hat_a_1.jpg',
-    '/static/hat_a_2.jpg',
-    '/static/hat_a_3.jpg',
+    [
+      '/static/hat_a_1.jpg',
+    ],
+    [
+      '/static/hat_b_1.jpg',
+    ],
   ],
   sizes: [
     's',
@@ -118,7 +137,9 @@ export default [{
   title: 'LEICHTE BOWLINGTASCHE',
   description: '100% Polyester',
   images: [
-    '/static/bag_1.jpg',
+    [
+      '/static/bag_1.jpg',
+    ],
   ],
   sizes: [
     'm',
@@ -129,6 +150,127 @@ export default [{
   price: {
     regular: 49.99,
     discounted: 24.99,
+  },
+  relatedProducts: [],
+  likeStatus: null,
+},
+{
+  id: '6',
+  title: 'SNEAKER',
+  description: '100% Baumwolle',
+  images: [
+    [
+      '/static/shoes_b_1.jpg',
+      '/static/shoes_b_2.jpg',
+      '/static/shoes_b_3.jpg',
+    ],
+    [
+      '/static/shoes_c_1.jpg',
+      '/static/shoes_c_2.jpg',
+      '/static/shoes_c_3.jpg',
+    ],
+  ],
+  sizes: [
+      '41',
+      '42',
+      '43',
+      '44',
+      '45',
+  ],
+  colors: [
+    '#1f1f27',
+    '#57656f',
+  ],
+  price: {
+    regular: 14.99,
+    discounted: 7.00,
+  },
+  relatedProducts: [],
+  likeStatus: null,
+},
+{
+  id: '7',
+  title: 'T-SHIRT BASIC',
+  description: '100% Bio-Baumwollmischung',
+  images: [
+    [
+      '/static/shirt_c_1.jpg',
+      '/static/shirt_c_2.jpg',
+      '/static/shirt_c_3.jpg',
+    ],
+    [
+      '/static/shirt_d_1.jpg',
+    ],
+    [],
+    [],
+  ],
+  sizes: [
+    's',
+    'm',
+    'l',
+    'xl',
+  ],
+  colors: [
+    '#fd9498',
+    '#c4e8f8',
+    '#862b71',
+    '#464557',
+  ],
+  price: {
+    regular: 6.99,
+    discounted: null,
+  },
+  relatedProducts: [],
+  likeStatus: null,
+},
+{
+  id: '8',
+  title: 'SWEATSHORTS',
+  description: '80% Baumwolle, 20% Polyester',
+  images: [
+    [
+      '/static/shorts_a_1.jpg',
+      '/static/shorts_a_2.jpg',
+    ],
+    [],
+  ],
+  sizes: [
+    's',
+    'm',
+    'l',
+    'xl',
+  ],
+  colors: [
+    '#0f1417',
+    '#0c0c0a',
+  ],
+  price: {
+    regular: 14.99,
+    discounted: 9.99,
+  },
+  relatedProducts: [],
+  likeStatus: null,
+},
+{
+  id: '9',
+  title: 'CAP MIT GUMMIDRUCK',
+  description: '100% Baumwolle',
+  images: [
+    [
+      '/static/cap_a_1.jpg',
+      '/static/cap_a_2.jpg',
+      '/static/cap_a_3.jpg',
+    ],
+  ],
+  sizes: [
+    'm',
+  ],
+  colors: [
+    '#161e29',
+  ],
+  price: {
+    regular: 9.99,
+    discounted: null,
   },
   relatedProducts: [],
   likeStatus: null,
