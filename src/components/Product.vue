@@ -9,8 +9,8 @@
       </div>
       <div class="right">
         <h2>{{product.title}}</h2>
-        <color-picker :colors="product.colors" :set-active="setActive"></color-picker>
-        <size-picker :sizes="product.sizes" :set-active="setActive"></size-pick>
+        <color-picker :colors="product.colors" :selected="product.selectedColor" :set-active="setActive"></color-picker>
+        <size-picker :sizes="product.sizes" :selected="product.selectedSize" :set-active="setActive"></size-pick>
         <price :price="product.price"></price>
       </div>
     </div>
@@ -27,9 +27,9 @@
       <div class="right">
         <h2>{{product.title}}</h2>
         <p>{{product.description}}</p>
-        <color-picker :colors="product.colors"></color-picker>
+        <color-picker :colors="product.colors" :selected="product.selectedColor"></color-picker>
         <price :price="product.price"></price>
-        <size-picker :sizes="product.sizes"></size-pick>
+        <size-picker :sizes="product.sizes" :selected="product.selectedSize"></size-pick>
       </div>
     </div>
   </div>
@@ -75,11 +75,13 @@ export default {
   }
   .compact .left{
     margin-right: 20px;
+    width: 200px;
   }
   .detail{
     display: flex;
   }
   .detail .left{
     margin-right: 20px;
+    max-width: 60%;
   }
 </style>

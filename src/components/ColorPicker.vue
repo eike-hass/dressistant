@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="color in colors" class="color" v-bind:style="{ background: color }" v-on:click="setActive"></div>
+    <div v-for="color in colors" class="color" v-bind:style="{ background: color }" v-bind:class="{ 'selected':selected === color }" v-on:click="setActive"></div>
   </div>
 </template>
 
@@ -10,6 +10,7 @@ export default {
   props: [
     'colors',
     'setActive',
+    'selected',
   ],
   data() {
     return {

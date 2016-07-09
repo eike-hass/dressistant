@@ -25,7 +25,11 @@
 
 <style scoped>
   .product{
-    width: 50%;
+    width: 33%;
     display: inline-block;
+    box-sizing: border-box;
+    padding-left:10px;
+    padding-right:10px;
+    vertical-align: top;
   }
 </style>

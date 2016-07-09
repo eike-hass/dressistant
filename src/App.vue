@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <butler></butler>
     <overlay v-if="activeProduct" :product="activeProduct"></overlay>
     <inventory :items.sync="inventoryItems"></inventory>
     <suggestions :items="suggestedItems"></suggestions>
@@ -10,18 +11,20 @@
 import Inventory from './components/Inventory';
 import Suggestions from './components/Suggestions';
 import Overlay from './components/Overlay';
+import Butler from './components/Butler';
 
 import productMock from './product';
 
 export default {
   components: {
+    Butler,
     Inventory,
     Suggestions,
     Overlay,
   },
   data() {
     return {
-      inventoryItems: [productMock[0]],
+      inventoryItems: [productMock[0], productMock[1]],
       activeProduct: null,
     };
   },
@@ -71,16 +74,5 @@ img{
 #app {
   color: #2c3e50;
   font-family: Source Sans Pro, Helvetica, sans-serif;
-  text-align: center;
-}
-
-#app a {
-  color: #42b983;
-  text-decoration: none;
-}
-
-.logo {
-  width: 100px;
-  height: 100px
 }
 </style>

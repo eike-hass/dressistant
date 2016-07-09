@@ -1,11 +1,14 @@
 <template>
   <div v-on:click="setActive">
-    <img src="http://lorempixel.com/400/200/">
+    <img :src="images[0]">
   </div>
 </template>
 
 <script>
 export default {
+  props: [
+    'images',
+  ],
   data() {
     return {
     };
