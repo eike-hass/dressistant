@@ -91,10 +91,10 @@ export default [{
   ],
   selectedSize: 'm',
   colors: [
-    '#0f1417',
+    '#ccd2df',
     '#0c0c0a',
   ],
-  selectedColor: '#0f1417',
+  selectedColor: '#ccd2df',
   price: {
     regular: 14.99,
     discounted: 9.99,
@@ -108,9 +108,8 @@ export default [{
   description: '100% Baumwolle',
   images: [
     [
-      '/static/cap_a_1.jpg',
-      '/static/cap_a_2.jpg',
-      '/static/cap_a_3.jpg',
+      '/static/hat_a_1.jpg',
+      '/static/hat_a_2.jpg',
     ],
   ],
   sizes: [

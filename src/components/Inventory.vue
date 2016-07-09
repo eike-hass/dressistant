@@ -27,4 +27,7 @@
   h1{
     text-align: center;
   }
+  .product{
+    margin-bottom: 20px;
+  }
 </style>
