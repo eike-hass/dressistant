@@ -47,11 +47,11 @@ export default [{
   ],
   selectedSize: '40',
   colors: [
-    'red',
-    'blue',
-    'green',
+    '#c9b7a9',
+    '#655640',
+    '#e9e8ed',
   ],
-  selectedColor: 'red',
+  selectedColor: '#c9b7a9',
   price: {
     regular: 49.99,
     discounted: 19.99,
