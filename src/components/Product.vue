@@ -93,7 +93,10 @@ export default {
     border: 2px solid black;
     width: 100%;
     color: white;
-    height: 40px;
+    //height: 40px;
+    font-size: 20px;
+    padding-top:5px;
+    padding-bottom: 5px;
     text-transform: uppercase;
   }
 </style>

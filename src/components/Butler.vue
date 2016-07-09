@@ -1,10 +1,13 @@
 <template>
   <div class="butler">
-    <button v-if="items.length">
+    <button v-if="items.length" v-on:click="order">
       Besorgs mir
     </button>
     <svg class="icon"><use xlink:href="#lnr-store"></use></svg>
       <div class="count">{{items.length}}</div>
+  </div>
+  <div v-show="showOrdered" class="overlay">
+    <span>Deine Artikel sind auf dem Weg zu dir!</span>
   </div>
 </template>
 
@@ -16,8 +19,13 @@ export default {
   ],
   data() {
     return {
-
+      showOrdered: false,
     };
+  },
+  methods: {
+    order() {
+      this.showOrdered = true;
+    },
   },
 };
 </script>
@@ -52,9 +60,25 @@ export default {
     background: transparent;
     text-transform: uppercase;
     border: 2px solid white;
-    height: 30px;
+    font-size: 20px;
+    padding-top:5px;
+    padding-bottom: 5px;
     margin-right: 10px;
     font-weight: bold;
     color: white;
+  }
+  .overlay{
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay span{
+    font-size: 40px;
   }
 </style>

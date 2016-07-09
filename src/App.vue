@@ -9,7 +9,7 @@
       <inventory :items.sync="inventoryItems"></inventory>
     </main>
     <footer>
-      <suggestions :items="suggestedItems"></suggestions>
+      <suggestions v-if="suggestedItems.length" :items="suggestedItems"></suggestions>
       <img src="/static/Banner.jpg">
     </footer>
   </div>
