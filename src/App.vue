@@ -43,8 +43,9 @@ export default {
         let matches = 0;
         this.inventoryItems.forEach((inventoryItem) => {
           const isRelated = inventoryItem.relatedProducts.indexOf(item.id) !== -1;
-          const isNotDisliked = inventoryItem.likeStatus === 'liked';
-          if (isRelated && isNotDisliked) {
+          const isLiked = inventoryItem.likeStatus === 'liked' &&
+            inventoryItem.relatedProductsLiked.indexOf(item.id) !== -1;
+          if (isRelated || isLiked) {
             matches++;
           }
         });

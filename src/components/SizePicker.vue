@@ -44,7 +44,7 @@ export default {
     font-size: 16px;
   }
   .size{
-    border: 1px solid gray;
+    border: 2px solid gray;
     text-transform: uppercase;
     padding: 5px;
     margin-right: 5px;

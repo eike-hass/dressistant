@@ -36,7 +36,7 @@ export default {
   .color{
     width: 30px;
     height: 30px;
-    border: 1px solid gray;
+    border: 2px solid gray;
     display: inline-block;
     margin-right: 5px;
     border-radius: 50%;

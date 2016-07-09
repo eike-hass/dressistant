@@ -1,7 +1,7 @@
 <template>
-  <div>
-    Price {{price.regular}}
-  </div>
+  <dh2>
+    {{price.regular}}
+  </h2>
 </template>
 
 <script>

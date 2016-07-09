@@ -13,7 +13,7 @@
     </div>
     <div v-if="layout == 'teaser'" class="teaser" v-on:click="setActive">
       <images :images="product.images[product.colors.indexOf(product.selectedColor)]"></images>
-      <h2>{{product.title}}</h2>
+      <h3>{{product.title}}</h3>
       <price :price="product.price"></price>
     </div>
     <div v-if="layout == 'detail'" class="detail">
@@ -25,8 +25,8 @@
         <h2>{{product.title}}</h2>
         <p>{{product.description}}</p>
         <color-picker :colors="product.colors" :selected.sync="product.selectedColor"></color-picker>
-        <price :price="product.price"></price>
         <size-picker :sizes="product.sizes" :selected.sync="product.selectedSize"></size-pick>
+        <price :price="product.price"></price>
       </div>
     </div>
   </div>
@@ -76,6 +76,9 @@ export default {
   }
   .compact .right{
     width: 50%;
+    text-align: center;
+  }
+  .teaser{
     text-align: center;
   }
   .detail{
